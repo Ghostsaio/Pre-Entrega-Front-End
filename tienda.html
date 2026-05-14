@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tienda - GAME-BUSTER.com</title>
+    <meta name="description" content="Nuestra tienda de videojuegos con las mejores ofertas.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Mismos links de CSS e iconos que tu index -->
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout layout-tienda">
+
+        <header class="header">
+            <div class="header-top">
+                <div class="cuenta">
+                    <button>Acceder </button>
+                    <button>Registrarse</button>
+                </div>
+                <div class="logo"></div>
+                <div class="sitio">
+                    <nav>GAME-BUSTER.com</nav>
+                </div>
+            </div>
+
+            <nav class="menu-top">
+                <ul class="flex-menu-top">
+                    <li class="menu-item"><a href="index.html">Inicio.</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Juegos populares</a></li>
+                            <li><a href="#">Novedades</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#">Consolas.</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">PC</a></li>
+                            <li><a href="#">Xbox</a></li>
+                            <li><a href="#">Play-Station</a></li>
+                            <li><a href="#">Switch</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#" style="color: yellowgreen;">Tienda.</a> <!-- Resaltado activo -->
+                        <ul class="sub-menu">
+                            <li><a href="#">Ofertas</a></li>
+                            <li><a href="#">Nuevos lanzamientos</a></li>
+                            <li><a href="#">Categorias</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#">Cuenta.</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Perfil</a></li>
+                            <li><a href="#">Historial</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- MENÚ LATERAL (Igual que index) -->
+        <nav class="menu">
+            <ul class="flex-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Mi-Biblioteca.html">Mi Biblioteca</a></li>
+                <li><a href="tienda.html" style="background: rgb(61, 91, 190);">Tienda</a></li> <!-- Resaltado activo -->
+                <li><a href="#">Cuenta</a></li>
+                <li class="Ofertas"><a href="#">Ofertas</a></li>
+            </ul> 
+        </nav>
+
+        <!-- CONTENIDO PRINCIPAL (MODIFICADO PARA LA TIENDA) -->
+        <main class="content" id="contenido-Principal">
+            <!-- Titulo -->
+            <h1>TIENDA</h1>
+            
+            <!-- Sección 1: Acción -->
+            <div class="caja-contenido">
+                <h2>🔥 Acción y Aventura</h2>
+                <p>Los juegos más explosivos del momento y de siempre.</p>
+            </div>
+
+            <div class="grilla-juegos">
+                <!-- Juego Acción 1 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/juego1.jpg" alt="Final Fantasy XVI">
+                    <div class="precio-tag">$59.99</div>
+                </div>
+                <!-- Juego Acción 2 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/juego2.jpg" alt="Final Fantasy XII-2">
+                    <div class="precio-tag">$13.99</div>
+                </div>
+                <!-- Juego Acción 3 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/biblioteca2.webp" alt="GTA-V">
+                    <div class="precio-tag">$45.00</div>
+                </div>
+                <!-- Juego Acción 4 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/biblioteca3.webp" alt="Devil May Cry 5">
+                    <div class="precio-tag">$6.99</div>
+                </div>
+                <!-- Juego Acción 5 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/biblioteca1.webp" alt="RDR 2">
+                    <div class="precio-tag">$50.00</div>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #555; margin: 40px 0;">
+
+            <!-- Sección 2: Estrategia -->
+            <div class="caja-contenido">
+                <h2>♟️ Estrategia</h2>
+                <p>Planifica, conquista y domina.</p>
+            </div>
+
+            <div class="grilla-juegos">
+                <!-- Juego Estrategia 1 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/estrategia1.webp" alt="Star-Craft II">
+                    <div class="precio-tag">Gratis</div>
+                </div>
+                <!-- Juego Estrategia 2 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/estrategia2.webp" alt="AOM Retold">
+                    <div class="precio-tag">$11.00</div>
+                </div>
+                <!-- Juego Estrategia 3 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/estrategia3.png" alt="Final Fantasy Tactics. The Ivalice Chronicles">
+                    <div class="precio-tag">$59.99</div>
+                </div>
+                <!-- Juego Estrategia 4 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/estrategia4.jpg" alt="Age of empires II">
+                    <div class="precio-tag">$24.99</div>
+                </div>
+                <!-- Juego Estrategia 5 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/estrategia5.webp" alt="Age of empires II">
+                    <div class="precio-tag">$16.99</div>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #555; margin: 40px 0;">
+
+            <!-- Sección 3: Fantasía -->
+            <div class="caja-contenido">
+                <h2>🐉 Fantasía Épica</h2>
+                <p>Mundos mágicos y héroes legendarios.</p>
+            </div>
+
+            <div class="grilla-juegos">
+                <!-- Juego Fantasía 1 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/juego3.jpg" alt="Final Fanty IX El mejor juego habido y por haber">
+                    <div class="precio-tag">$10.00</div>
+                </div>
+                <!-- Juego Fantasía 2 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/biblioteca5.webp" alt="Final Fantasy VII Rebirth">
+                    <div class="precio-tag">$7.99</div>
+                </div>
+                <!-- Juego Fantasía 3 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/juego5.jpg" alt="Final Fantasy XIV">
+                    <div class="precio-tag">$7.99</div>
+                </div>
+                <!-- Juego Fantasía 4 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/juego6.jpg" alt="Final Fantasy VIII">
+                    <div class="precio-tag">$8.50</div>
+                </div>
+                <!-- Juego Fantasía 5 -->
+                <div class="portada-juego">
+                    <img src="CSS/img/juego4.jpg" alt="Final Fantasy 1">
+                    <div class="precio-tag">$7.99</div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- FOOTER (Igual que index) -->
+        <footer class="footer">
+            <div class="sub-footer">
+                <nav class="menu-footer">
+                    <ul class="flex-menu-footer">
+                        <li><a href="">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="">Reseñas</a></li>
+                        <li><a href="">Privacidad</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

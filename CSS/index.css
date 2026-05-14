@@ -5,6 +5,16 @@
     font-family: sans-serif;
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #212121;
+    background-color: #ededed;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
 .layout{
     display: grid;
 
@@ -41,7 +51,7 @@
     display: flex;
     flex-direction: column; /*apila verticalmente la fila sup y despues la inf*/
     gap: 10px;
-    padding: 15px 20px;
+    padding: 2px 20px;
     color: #fff; 
     position: relative; /*genera nuevo contexto de posicionamiento*/
     z-index: 100;
@@ -98,7 +108,7 @@
     gap: 10px;
     list-style: none;
     background-image: url(img/fondo2.jpg);
-    background-position: 50%;
+    background-position: 40%  ;
     background-size: cover;
 }
 
@@ -149,10 +159,14 @@
     transition: color 0.3s;
 }
 
+.content{
+    align-items: left  ;
+}
+
 .content h1{
     color: rgb(245, 217, 60);
     background-color: rgba(1, 24, 6, 0.733);
-    box-shadow: 5px 9px 5px rgb(53, 87, 119);
+    box-shadow: 0px 4px 5px rgb(53, 87, 119);
     text-align: center;
     -webkit-text-stroke: 2px;
     -webkit-text-stroke-color: rgba(61, 47, 30, 0.705);
@@ -161,27 +175,84 @@
     border-radius: none ;
 }
 
-.content h2{
-    display: inline-block;
-    width: border-box;
-    background-color: rgba(22, 25, 29, 0.541);
-    overflow: hidden;
-    color: white;
-    border-radius: 2px;
-    border-bottom: 3px solid black;
-}
 
 .content p {
-    max-width: 1200px;
     padding: 20px;
     text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: left;
+    background-color: #c5c5c542;
+    background-size: contain;
+    background-position:center;
+    
+    
 }
 
-.caja-contenido h2{
-    padding: 4px ;
-    box-sizing: content-box;
+.caja-contenido {
+    max-width: 700px;
+    /* margin: 0 auto 20px auto; Esta mierda me estaba rompiendo todo */
+    padding: 10px 20px;
+    
+    background-color: rgba(30, 35, 40, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    border-left: 4px solid rgb(7, 173, 165);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    /* IMPORTANTE: Esto asegura que el texto dentro se alinee a la izquierda */
+    text-align: left; 
+}
+
+.caja-contenido h2 {
+    margin: 0 !important; 
+    
+    /* Tipografía */
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    
+    /* ALINEACIÓN FORZADA */
+    text-align: left ;
+    display: block ;
+    width: auto ;
+    
+    /* Posición para la línea decorativa */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Efecto de Línea decorativa por experimentar nomas */
+.caja-contenido h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Aseguramos que empiece en el borde izquierdo */
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, rgb(7, 173, 165), transparent);
+    border-radius: 2px;
+}
 
 
+/* Descripción pequeña debajo del título (para agregar p dentro de caja-contenido) */
+/* 12-05 no se agregaron P dentro de la clase caja contenido */
+.caja-contenido p {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: #ccc;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: left;
 }
 
 .cuenta{
@@ -324,14 +395,154 @@
     font-size: 2rem;
 }
 
+/* Div Contenedor del formulario */
 .formulario-Contacto {
-    border: 1px solid black;
-    width: 70%;
-    height: 90%;
-    background-color: #ffffff9c;
-    align-items: left;
-    margin: 15px;
-    padding-left: 10px;
+
+    width: 100%;
+    max-width: 700px; /* Evita que se estire demasiado en pantallas grandes*/
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(240, 240, 240, 0.808);
+    backdrop-filter: blur(5px); /* Efecto de desenfoque (Verificar si se adapta a la estetica)  */
+
+    border-radius: 8px;
+    border: 1px solid  rgba(0, 0, 0, 0.1);  
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) ;
+    
+}
+
+/* Formulario dentro del Div  */
+.formulario-Contacto form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px   ;
+
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 20px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+
+}
+
+.formulario-Contacto input, .formulario-Contacto textarea{
+    width: 100%; /* Ocupan todo el ancho disponible */
+    padding: 12px 15px;
+    font-size: 16px; /* Tamaño legible para móviles */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Formatos especificos del textarea del formulario */
+.formulario-Contacto textarea{
+    resize: vertical; /* Permite ajustarse al texto solo verticalmente añadiendo un scroll */
+    min-height: 150px;
+    line-height: 1.5;
+
+}
+
+/* Efecto al hacer clic en un campo de texto en el formulario*/
+.formulario-Contacto input:focus,
+.formulario-Contacto textarea:focus {
+    outline: none;
+    border-color: rgb(7, 173, 165); /* Color del borde del campo */
+    box-shadow: 0 0 5px rgba(7, 173, 165, 0.3); /* Ligera sombra en el campo seleccionado */
+}
 
 
+
+
+/* Boton "Enviar" de formulario */
+.submit{
+    background-color: #0bdf40; 
+    color: white; 
+    padding: 12px 30px;
+    border: none;  
+    border-radius: 5px; 
+    cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+
+    font-size: 16px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    align-self: center;
+    
+}
+
+.submit:hover {
+    background-color: rgb(61, 91, 190); /* Buscar el mismo color que en hoover del nav lateral */
+}
+
+/* Estilos de tienda.html */
+
+.layout.layout-tienda{
+    background-image: url(img/fondoTienda2.jpg);
+}
+/* Etiqueta de Precio */
+.precio-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Lato', sans-serif;
+    z-index: 2;
+    
+    /* Transición suave para el efecto hover */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border: 1px solid transparent;
+}
+
+/* Efecto Hover en la PORTADA (Card) */
+.portada-juego {
+    position: relative; /* Necesario para que el precio se posicione relativo a la tarjeta */
+    overflow: hidden;
+}
+
+/* Cuando pasas el mouse sobre la tarjeta, el precio cambia */
+.portada-juego:hover .precio-tag {
+    background-color: rgb(7, 173, 165); /* Color principal de tu marca */
+    color: #fff;
+    transform: scale(1.1) translateY(-5px); /* Crece y sube un poco */
+    border-color: #fff;
+    box-shadow: 0 4px 10px rgba(7, 173, 165, 0.6); /* Resplandor verde azulado */
+}
+
+/* Ajuste para que el precio no se corte si la imagen tiene bordes redondeados */
+.portada-juego img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.portada-juego:hover img {
+    transform: scale(1.05); /* La imagen crece un poco detrás del precio */
+}
+
+/* Ajuste responsive para móviles generado por la IA- Consultar en clase */
+@media (max-width: 600px) {
+    .precio-tag {
+        font-size: 0.9rem;
+        padding: 4px 10px;
+        bottom: 5px;
+        right: 5px;
+    }
 }

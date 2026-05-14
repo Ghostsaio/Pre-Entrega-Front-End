@@ -110,20 +110,49 @@
             <main class="content" Id="contenido-Principal">
                 <h1>Contacto</h1>
 
+                <h2>Formulario de contacto:</h2>
+                
+                <p>Por favor describa su problema o consulta aquí. Alguien de nuestro personal estará con usted lo antes posible (normalmente dentro de las 24 horas).</p>
+
                 <div class="formulario-Contacto">
-                    <h2>Formulario de contacto:</h2>
-                    <form action="https://formspree.io/f/meendewj" method="POST">
-                        <label for="nombre" id="nombre"> NOMBRE:</label>
-                        <input type="text" name="nombre">
                     
+                    <form action="https://formspree.io/f/meendewj" method="POST">
 
+                        <label for="">Email:</label>
+                        <input type="email" name="Email" id="email" placeholder="Casilla de correo">
 
+                        <label for="nombre" > Nombre:</label>
+                        <input type="text" name="nombre" id="name" maxlength="30" placeholder="Ingrese su nombre">
 
+                        <label for="SO" > Sistema operativo / Consola:</label>
+                        <select name="SistemaOperativo" id="SO" >
+                            <option value="WIN">Windows</option>
+                            <option value="LIN">Linux</option>
+                            <option value="XBOX">Xbox</option>
+                            <option value="PS">Play-Station</option>
+                            <option value="SWITCH">Nintendo Switch</option>
+                            <option value="OTRO">Otro</option>
+                        </select>
 
+                        <label for="problem-kind" > Tipo de problema / Duda:</label>
+                        <select name="problema" id="problem" >
+                            <option value="COMPRA">Problema con la Compra</option>
+                            <option value="REJECT-PAY">Problemas con el metodo de pago</option>
+                            <option value="INSTALL-PR">Probemas de intalacion</option>
+                            <option value="REFOUND">Reembolso</option>
+                            <option value="ACCOUNT">Problemas con mi cuenta</option>
+                            <option value="OTRO">Otro</option>
+                        </select>
 
+                        <label for="asunto" > Asunto:</label>
+                        <input type="text" name="asunto" id="subject" class="box-form chico" placeholder="Asunto (max:60 caracteres)" maxlength="60">
 
+                        <label for="descripcion" > Descripción del problema:</label>
+                        <textarea  name="descripcion" id="description" class="box-form form-big" placeholder="Describa su duda o problema (max:300 caracteres)" rows="5" cols="50" maxlength="300"></textarea> 
 
-
+                        <input type="submit" name="commit" value="Enviar" class="submit">
+                                                
+                    
                     </form>
                 </div>
 
