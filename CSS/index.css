@@ -235,7 +235,7 @@ body {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0; /* Aseguramos que empiece en el borde izquierdo */
+    left: 0; /* Asegura que empiece en el borde izquierdo */
     width: 60px;
     height: 3px;
     background: linear-gradient(90deg, rgb(7, 173, 165), transparent);
@@ -510,13 +510,13 @@ body {
 
 /* Efecto Hover en la PORTADA (Card) */
 .portada-juego {
-    position: relative; /* Necesario para que el precio se posicione relativo a la tarjeta */
+    position: relative; /* Necesario para que el precio se posicione relativo a la portada de los juegos */
     overflow: hidden;
 }
 
 /* Cuando pasas el mouse sobre la tarjeta, el precio cambia */
 .portada-juego:hover .precio-tag {
-    background-color: rgb(7, 173, 165); /* Color principal de tu marca */
+    background-color: rgb(13, 131, 39); /*Color de la etiqueta del precio*/
     color: #fff;
     transform: scale(1.1) translateY(-5px); /* Crece y sube un poco */
     border-color: #fff;
